@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 class OperationsController extends Controller
 {
-    public function addition(int $a, int $b): int
+    //Potencia
+    public function power(int $a, int $b): int|float
     {
-        return $a + $b;
-
+        return pow($a, $b);
     }
 }
 

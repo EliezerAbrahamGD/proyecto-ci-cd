@@ -15,14 +15,14 @@ class ExampleTest extends TestCase
         $this->assertTrue(true);
     }
 
-    public function test_addition_result(): void
+    public function test_power_result(): void
     {
         $controller = new OperationsController;
-        $result = $controller->addition(4, 9);
+        $result = $controller->power(4, 9);
 
         $this->assertIsInt($result);
         $this->assertNotNull($result);
-        $this->assertEquals(13, $result);
+        $this->assertEquals(8, $result);
         $this->assertGreaterThan(0, $result);
     }
 }
