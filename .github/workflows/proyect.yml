@@ -35,10 +35,16 @@ jobs:
 
       - name: Set up Laravel environment
         run: |
+         mkdir -p bootstrap/cache storage/framework/{views,cache}
+         chmod -R 755 bootstrap storage
+
+      - name: Install PHP Dependencies
+        run: composer install --no-ansi --no-interaction --prefer-dist
+
+      - name: Configure Laravel
+        run: |
           cp .env.example .env
           php artisan key:generate
-          mkdir -p bootstrap/cache storage/framework/{views,cache}
-          chmod -R 755 bootstrap storage
 
       - name: Run migrations
         run: php artisan migrate --env=testing
