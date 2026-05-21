@@ -35,7 +35,15 @@ jobs:
           coverage: none
 
       - name: Create bootstrap cache directory
-        run: mkdir -p bootstrap/cache
+        run: mkdir -p bootstrap/cache storage/framework/views sdtorage/framework/cache
+
+      - name: Create storage directories
+        run: |
+          mkdir -p bootstrap/cache
+          mkdir -p storage/framework/views
+          mkdir -p storage/framework/cache
+          mkdir -p storage/logs
+          chmod -R 775 storage bootstrap/cache
 
       - name: Install Composer dependencies
         run: composer install --prefer-dist --no-interaction --no-progress
