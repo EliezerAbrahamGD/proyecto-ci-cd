@@ -37,9 +37,6 @@ jobs:
       - name: Create bootstrap cache directory
         run: mkdir -p bootstrap/cache
 
-      - name: Make bootstrap cache writable
-        run: chmod -R 777 bootstrap/cache
-
       - name: Install Composer dependencies
         run: composer install --prefer-dist --no-interaction --no-progress
 
