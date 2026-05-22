@@ -35,7 +35,7 @@ jobs:
           echo "VIEW_CACHE_PATH=storage/framework/views" >> .env.testing
 
       - name: Install dependencies
-        run: composer install --prefer-dist --no-progress
+        run: composer install --prefer-dist --no-progress --dev
 
       - name: Copy .env
         run: cp .env.example .env
@@ -54,3 +54,6 @@ jobs:
 
       - name: Run Laravel Pint
         run: ./vendor/bin/pint --test
+
+      - name: Run PHPStan
+        run: ./vendor/bin/phpstan analyse
