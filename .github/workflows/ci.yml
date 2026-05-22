@@ -26,8 +26,13 @@ jobs:
 
       - name: Create cache directories
         run: |
-          mkdir -p storage bootstrap/cache
+          mkdir -p storage bootstrap/cache storage/framework/views
           chmod -R 777 storage bootstrap/cache
+
+      - name: Create testing environment file
+        run: |
+          cp .env.example .env.testing
+          echo "VIEW_CACHE_PATH=storage/framework/views" >> .env.testing
 
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress
