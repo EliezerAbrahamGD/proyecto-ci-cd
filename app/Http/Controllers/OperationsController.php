@@ -8,4 +8,9 @@ class OperationsController extends Controller
     {
         return pow($a, $b);
     }
+
+    public function addition(int $a, int $b): int
+    {
+        return $a + $b;
+    }
 }
