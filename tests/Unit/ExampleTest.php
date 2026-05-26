@@ -20,7 +20,7 @@ class ExampleTest extends TestCase
      */
     public function test_multiplication_result(): void
     {
-        $controller = new OperationsController();
+        $controller = new OperationsController;
 
         $result = $controller->multiplication(5, 3);
 
@@ -32,7 +32,7 @@ class ExampleTest extends TestCase
      */
     public function test_average_result(): void
     {
-        $controller = new OperationsController();
+        $controller = new OperationsController;
 
         $result = $controller->average(8, 4);
 
@@ -44,7 +44,7 @@ class ExampleTest extends TestCase
      */
     public function test_power_result(): void
     {
-        $controller = new OperationsController();
+        $controller = new OperationsController;
 
         $result = $controller->power(4, 9);
 
@@ -59,7 +59,7 @@ class ExampleTest extends TestCase
      */
     public function test_addition_result(): void
     {
-        $controller = new OperationsController();
+        $controller = new OperationsController;
 
         $result = $controller->addition(4, 9);
 
@@ -71,7 +71,7 @@ class ExampleTest extends TestCase
      */
     public function test_subtraction_result(): void
     {
-        $controller = new OperationsController();
+        $controller = new OperationsController;
 
         $result = $controller->subtraction(10, 4);
 
@@ -83,7 +83,7 @@ class ExampleTest extends TestCase
      */
     public function test_division_result(): void
     {
-        $controller = new OperationsController();
+        $controller = new OperationsController;
 
         $result = $controller->division(20, 5);
 
@@ -95,7 +95,7 @@ class ExampleTest extends TestCase
      */
     public function test_modulo_result(): void
     {
-        $controller = new OperationsController();
+        $controller = new OperationsController;
 
         $result = $controller->modulo(10, 3);
 
@@ -107,7 +107,7 @@ class ExampleTest extends TestCase
      */
     public function test_percentage_result(): void
     {
-        $controller = new OperationsController();
+        $controller = new OperationsController;
 
         $result = $controller->percentage(200, 10);
 
