@@ -34,7 +34,7 @@ class OperationsController extends Controller
     public function division(int $a, int $b): float|string
     {
         if ($b == 0) {
-            return "Error: división entre cero";
+            return 'Error: división entre cero';
         }
 
         return $a / $b;
